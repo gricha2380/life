@@ -15,6 +15,10 @@ $(document).ready(function() {
 
 		//life chart loop
 		lifeYears();
+		christmas();
+		elections();
+		books();
+		parents();
 
 	});
 
@@ -93,4 +97,67 @@ $(document).ready(function() {
 		$(".life-chart").append(lifeChartRemainder);
 		$(".years-left").html(avgDay-ageDay + " days left");
 	}
+
+	// secondary charts
+	function christmas(){
+		var christmasChartContent = '';
+		for (var x=0;x<age;x++) {
+			christmasChartContent += '<div class="unit square christmas"></div>'
+		}
+		$(".christmas-chart").html(christmasChartContent);
+
+		var christmasChartRemainder = '';
+		for (var x=0;x<avgLife-age;x++) {
+			christmasChartRemainder += '<div class="unit square gray christmas"></div>';
+		}
+		$(".christmas-chart").append(christmasChartRemainder);
+		$(".christmas-left").html(remainder + " Christmases left");
+	}
+
+	function elections(){
+		var electionsChartContent = '';
+		for (var x=0;x<(avgLife-age)/4;x++) {
+			electionsChartContent += '<div class="unit square elections"></div>'
+		}
+		$(".elections-chart").html(electionsChartContent);
+
+		var electionsChartRemainder = '';
+		for (var x=0;x<(avgLife-age)/4;x++) {
+			electionsChartRemainder += '<div class="unit square gray elections"></div>';
+		}
+		$(".elections-chart").append(electionsChartRemainder);
+		$(".elections-left").html((avgLife-age)/4 + " Elections left");
+	}
+
+	function books(){
+		var booksChartContent = '';
+		for (var x=0;x<(avgLife-age)*4;x++) {
+			booksChartContent += '<div class="unit square books small"></div>'
+		}
+		$(".books-chart").html(booksChartContent);
+
+		var booksChartRemainder = '';
+		for (var x=0;x<(avgLife-age)*4;x++) {
+			booksChartRemainder += '<div class="unit square gray books small"></div>';
+		}
+		$(".books-chart").append(booksChartRemainder);
+		$(".books-left").html((avgLife-age)*4 + " books left");
+	}
+
+	function parents(){
+		var parentsChartContent = '';
+		for (var x=0;x<((age-18)+(365*18));x++) {
+			parentsChartContent += '<div class="unit square parents micro"></div>'
+		}
+		$(".parents-chart").html(parentsChartContent);
+
+		var parentsChartRemainder = '';
+		for (var x=0;x<(avgLife-(age+25))*2;x++) {
+			parentsChartRemainder += '<div class="unit square gray parents micro"></div>';
+		}
+		$(".parents-chart").append(parentsChartRemainder);
+		$(".parents-left").html((avgLife-(age+25))*2 + " remaining trips to visit your parents before they die.");
+	}
+
+
 });

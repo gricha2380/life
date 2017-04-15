@@ -13,12 +13,16 @@
 		<div class="row">
 			<div class="col-lg-3">
 				<div><span>What year were you born?</span></div>
-				<div class="input-group">
-					<input type="text" class="form-control what-year" placeholder="1999">
-					<span class="input-group-btn">
-						<button class="btn btn-default" type="button" id="go">Go!</button>
-					</span>
-				</div>
+				<form>
+					<div class="input-group">
+					<input type="number" class="form-control what-year" placeholder="1999" required min="1950" max="2017">
+
+						<!-- <button class="btn btn-default" type="button" id="go">Go!</button> -->
+					</div>
+					            					        <button type="submit" class="btn btn-default">Submit</button>
+
+				</form>
+
 			</div>
 		</div> <!-- end row -->
 		<div class="chart section">
@@ -38,6 +42,37 @@
 					</div>
 				</div>
 			</div> <!-- end main chart section -->
+			<div class="chart section">
+				<div class="row">
+					<div class="christmas-left"></div>
+						<div class="christmas-chart">
+						</div>
+				</div>
+			</div>
+
+			<div class="chart section">
+				<div class="row">
+					<div class="elections-left"></div>
+						<div class="elections-chart">
+						</div>
+				</div>
+			</div>
+
+			<div class="chart section">
+				<div class="row">
+					<div class="books-left"></div>
+						<div class="books-chart">
+						</div>
+				</div>
+			</div>
+			<div class="chart section">
+				<div class="row">
+					<div class="parents-left"></div>
+						<div class="parents-chart">
+						</div>
+				</div>
+			</div>
+
 		</div> <!-- end main container -->
 	</body>
 
