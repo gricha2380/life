@@ -3,7 +3,8 @@ $(document).ready(function() {
 	var avgLife = 78, avgDay = avgLife*365, avgMonth = avgLife*12, avgWeek = avgLife *52;
 	var yearBorn, age, remainder, ageMonth, ageWeek, ageDay;
 
-	$("#go").click(function(){
+	$("#go").click(function(event){
+		event.preventDefault();
 		yearBorn = $(".what-year").val();
 		age = currentYear - yearBorn;
 		remainder = avgLife - age;
@@ -22,7 +23,8 @@ $(document).ready(function() {
 
 	});
 
-	$(".unit-of-time a").click(function(){
+	$(".unit-of-time a").click(function(event){
+		event.preventDefault();
 		$(".unit-of-time a").removeClass("active");
 		$(this).addClass("active");
 		if($(this).hasClass("months")) {

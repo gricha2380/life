@@ -3,73 +3,114 @@
 <head>
 	<title>Life 1.0</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/propeller.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/propeller.min.js"></script>
 	<script type="text/javascript" src="js/code.js"></script>
 </head>
 
 <body>
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-3">
 				<div><span>What year were you born?</span></div>
-				<form>
+				<form class="navbar-form navbar-left" id="year-born">
 					<div class="input-group">
 					<input type="number" class="form-control what-year" placeholder="1999" required min="1950" max="2017">
 
 						<!-- <button class="btn btn-default" type="button" id="go">Go!</button> -->
 					</div>
-					            					        <button type="submit" class="btn btn-default">Submit</button>
+					<!-- <button type="submit" class="btn btn-default">Submit</button> -->
+					<input type="submit" value="Go!" class="btn pmd-btn-raised pmd-ripple-effect btn-primary " id="go">
 
 				</form>
-
-			</div>
 		</div> <!-- end row -->
-		<div class="chart section">
-			<div class="life-in">
-				<div class="row">
-					<span class="section-title">Life in</span>
-					<span class="unit-of-time"><a href="#" class="years active">Years</a>
-						<a href="#" class="months">Months</a>
-						<a href="#" class="weeks">Weeks</a>
-						<a href="#" class="days">Days</a></span>
-					</div>
-					<div class="row">
+
+
+		<div class="chart section panel-group pmd-accordion pmd-accordion-inbox">
+			<div class="life-in panel panel-default active">
+				<div class="rown panel-heading">
+					<a data-toggle ="collapse">
+						<h4 class="years-left panel-title"></h4>
+					</a>
+				</div>
+				<div class="panel-collapse collapse in">
+					<div class="panel-body">
+						<span class="unit-of-time">
+							<a href="#" class="years active">Years</a>
+							<a href="#" class="months">Months</a>
+							<a href="#" class="weeks">Weeks</a>
+							<a href="#" class="days">Days</a>
+						</span>
+
 						<div class="life-chart">
-							<!-- <div class="unit square"></div> -->
 						</div>
-						<div class="years-left"></div>
 					</div>
 				</div>
-			</div> <!-- end main chart section -->
-			<div class="chart section">
-				<div class="row">
-					<div class="christmas-left"></div>
-						<div class="christmas-chart">
+			</div>
+		</div> <!-- end main chart section -->
+
+			<div class="chart section panel-group pmd-accordion pmd-accordion-inbox">
+				<div class=" panel panel-default active">
+					<div class="panel-heading">
+						<a data-toggle ="collapse">
+							<div class="christmas-left"></div>
+						</a>
+					</div>
+					<div class="panel-collapse collapse in">
+						<div class="panel-body">
+							<div class="christmas-chart">
+							</div>
 						</div>
+					</div>
 				</div>
 			</div>
 
-			<div class="chart section">
-				<div class="row">
-					<div class="elections-left"></div>
-						<div class="elections-chart">
+			<div class="chart section panel-group pmd-accordion pmd-accordion-inbox">
+				<div class=" panel panel-default active">
+					<div class="panel-heading">
+						<a data-toggle ="collapse">
+							<div class="elections-left"></div>
+						</a>
+					</div>
+					<div class="panel-collapse collapse in">
+						<div class="panel-body">
+							<div class="elections-chart">
+							</div>
 						</div>
+					</div>
 				</div>
 			</div>
 
-			<div class="chart section">
-				<div class="row">
-					<div class="books-left"></div>
-						<div class="books-chart">
+			<div class="chart section panel-group pmd-accordion pmd-accordion-inbox">
+				<div class=" panel panel-default active">
+					<div class="panel-heading">
+						<a data-toggle ="collapse">
+							<div class="books-left"></div>
+						</a>
+					</div>
+					<div class="panel-collapse collapse in">
+						<div class="panel-body">
+							<div class="books-chart">
+							</div>
 						</div>
+					</div>
 				</div>
 			</div>
-			<div class="chart section">
-				<div class="row">
-					<div class="parents-left"></div>
-						<div class="parents-chart">
+
+			<div class="chart section panel-group pmd-accordion pmd-accordion-inbox">
+				<div class=" panel panel-default active">
+					<div class="panel-heading">
+						<a data-toggle ="collapse">
+							<div class="parents-left"></div>
+						</a>
+					</div>
+					<div class="panel-collapse collapse in">
+						<div class="panel-body">
+							<div class="parents-chart">
+							</div>
 						</div>
+					</div>
 				</div>
 			</div>
 
