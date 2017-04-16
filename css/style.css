@@ -9,6 +9,15 @@
 	background: #009688;
 	margin: 2px;
 }
+.unit.square:hover {
+    /*box-shadow: 2px 1px 1px rgba(0,0,0,.4);*/
+    background: rgba(0, 150, 136, 0.58);
+    transition: .5s;
+}
+.unit.square.gray:hover {
+	background: #9e9e9e;
+}
+
 .gray {
 	background: #9e9e9e;
 }
@@ -82,6 +91,12 @@ a[data-toggle="collapse"] {
     margin: -13px 0;
     color: #9E9E9E;
 }
+
+.panel-group.pmd-accordion .panel>.panel-heading .unit-of-time a:hover {
+	cursor: pointer;
+	color: #23527c;
+}
+
 .panel-body p {
 	color: #607d8b;
 }

@@ -40,8 +40,8 @@ $(document).ready(function() {
 		$(this).addClass("active");
 		if($(this).hasClass("months")) {
 			lifeMonths();
-			console.log(ageMonth+" age in months");
-			console.log(avgMonth-ageMonth+" avg month minus age month");
+			// console.log(ageMonth+" age in months");
+			// console.log(avgMonth-ageMonth+" avg month minus age month");
 		} else if ($(this).hasClass("years")){
 			lifeYears();
 		} else if ($(this).hasClass("weeks")) {
@@ -93,7 +93,7 @@ $(document).ready(function() {
 			lifeChartRemainder += '<div class="unit square gray small"></div>';
 		}
 		$(".life-chart").append(lifeChartRemainder);
-		$(".years-left").html(avgWeek-ageWeek + " weeks left to live");
+		$(".years-left").html(Number(avgWeek-ageWeek).toLocaleString() + " weeks left to live");
 	}
 
 	function lifeDays(){
@@ -108,7 +108,7 @@ $(document).ready(function() {
 			lifeChartRemainder += '<div class="unit square gray micro"></div>';
 		}
 		$(".life-chart").append(lifeChartRemainder);
-		$(".years-left").html(avgDay-ageDay + " days left");
+		$(".years-left").html(Number(avgDay-ageDay).toLocaleString() + " days left");
 	}
 
 	// secondary charts
