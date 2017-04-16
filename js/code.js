@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	var currentYear = (new Date).getFullYear();
-	var avgLife = 78, avgDay = avgLife*365, avgMonth = avgLife*12, avgWeek = avgLife *52;
+	var avgLife = 85, avgDay = avgLife*365, avgMonth = avgLife*12, avgWeek = avgLife *52;
 	var yearBorn, age, remainder, ageMonth, ageWeek, ageDay;
 
 	$("#go").click(function(event){
@@ -14,7 +14,6 @@ $(document).ready(function() {
 			$(".error").html('<p class="text-center">Please enter a valid year.</p>');
 		}
 		else {
-			console.log("hello");
 			age = currentYear - yearBorn;
 			remainder = avgLife - age;
 			ageMonth = age*12;
@@ -22,7 +21,8 @@ $(document).ready(function() {
 			ageDay = age*365;
 
 			//console.log("Born in "+yearBorn,"You are "+age);
-			$(".page-body").fadeIn('slow'); //make this fade in
+			$(".page-body").fadeIn('slow');
+			$('footer p').fadeIn('slow');
 
 			//life chart loop
 			lifeYears();

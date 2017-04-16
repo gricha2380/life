@@ -88,3 +88,9 @@ a[data-toggle="collapse"] {
 .error {
 	display: none;
 }
+footer p{
+	text-align: center;
+	color: #607d8b;
+	display: none;
+    padding-bottom: 30px;
+}
