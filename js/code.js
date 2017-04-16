@@ -5,6 +5,8 @@ $(document).ready(function() {
 
 	$("#go").click(function(event){
 		event.preventDefault();
+
+		//$(".main-input").removeClass("waiting");
 		yearBorn = $(".what-year").val();
 		age = currentYear - yearBorn;
 		remainder = avgLife - age;
@@ -13,6 +15,7 @@ $(document).ready(function() {
 		ageDay = age*365;
 
 		//console.log("Born in "+yearBorn,"You are "+age);
+		$(".page-body").fadeIn('slow'); //make this fade in
 
 		//life chart loop
 		lifeYears();
@@ -52,7 +55,7 @@ $(document).ready(function() {
 			lifeChartRemainder += '<div class="unit square gray"></div>';
 		}
 		$(".life-chart").append(lifeChartRemainder);
-		$(".years-left").html(remainder + " years left");
+		$(".years-left").html(remainder + " years left to live");
 	}
 
 	function lifeMonths(){
@@ -67,7 +70,7 @@ $(document).ready(function() {
 			lifeChartRemainder += '<div class="unit square gray small"></div>';
 		}
 		$(".life-chart").append(lifeChartRemainder);
-		$(".years-left").html(avgMonth-ageMonth + " months left");
+		$(".years-left").html(avgMonth-ageMonth + " months left to live");
 	}
 
 	function lifeWeeks(){
@@ -82,7 +85,7 @@ $(document).ready(function() {
 			lifeChartRemainder += '<div class="unit square gray small"></div>';
 		}
 		$(".life-chart").append(lifeChartRemainder);
-		$(".years-left").html(avgWeek-ageWeek + " weeks left");
+		$(".years-left").html(avgWeek-ageWeek + " weeks left to live");
 	}
 
 	function lifeDays(){

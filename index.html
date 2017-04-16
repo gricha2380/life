@@ -12,7 +12,7 @@
 
 <body>
 	<div class="container">
-		<div class="row">
+		<div class="row main-input waiting">
 				<div><span>What year were you born?</span></div>
 				<form class="navbar-form navbar-left" id="year-born">
 					<div class="input-group">
@@ -26,22 +26,24 @@
 				</form>
 		</div> <!-- end row -->
 
-
+		<div class="page-body">
 		<div class="chart section panel-group pmd-accordion pmd-accordion-inbox">
 			<div class="life-in panel panel-default active">
 				<div class="rown panel-heading">
 					<a data-toggle ="collapse">
-						<h4 class="years-left panel-title"></h4>
+						<h2 class="years-left panel-title"></h2>
 					</a>
+					<span class="unit-of-time">
+						<a href="#" class="years active">Years</a>
+						<a href="#" class="months">Months</a>
+						<a href="#" class="weeks">Weeks</a>
+						<a href="#" class="days">Days</a>
+					</span>
 				</div>
 				<div class="panel-collapse collapse in">
 					<div class="panel-body">
-						<span class="unit-of-time">
-							<a href="#" class="years active">Years</a>
-							<a href="#" class="months">Months</a>
-							<a href="#" class="weeks">Weeks</a>
-							<a href="#" class="days">Days</a>
-						</span>
+
+						<p>The average American lives to be 78 years old. <span class="research"><a href="" target="_blank">Research link</a>.</span></p>
 
 						<div class="life-chart">
 						</div>
@@ -54,7 +56,7 @@
 				<div class=" panel panel-default active">
 					<div class="panel-heading">
 						<a data-toggle ="collapse">
-							<div class="christmas-left"></div>
+							<h2 class="christmas-left panel-title"></h2>
 						</a>
 					</div>
 					<div class="panel-collapse collapse in">
@@ -70,7 +72,7 @@
 				<div class=" panel panel-default active">
 					<div class="panel-heading">
 						<a data-toggle ="collapse">
-							<div class="elections-left"></div>
+							<h2 class="elections-left panel-title"></h2>
 						</a>
 					</div>
 					<div class="panel-collapse collapse in">
@@ -86,11 +88,12 @@
 				<div class=" panel panel-default active">
 					<div class="panel-heading">
 						<a data-toggle ="collapse">
-							<div class="books-left"></div>
+							<h2 class="books-left panel-title"></h2>
 						</a>
 					</div>
 					<div class="panel-collapse collapse in">
 						<div class="panel-body">
+						<p>With an assumed reading rate of four books a year.</p>
 							<div class="books-chart">
 							</div>
 						</div>
@@ -102,17 +105,19 @@
 				<div class=" panel panel-default active">
 					<div class="panel-heading">
 						<a data-toggle ="collapse">
-							<div class="parents-left"></div>
+							<h2 class="parents-left panel-title"></h2>
 						</a>
 					</div>
 					<div class="panel-collapse collapse in">
 						<div class="panel-body">
+						<p>The overwhelming majority of our time spent with our parents occurs when we are children. In most cases, childhood involves daily trips home to one or more parents. After adulthood, for those who move to different cities, the rate drops from daily in-person experiences to just a few visits a year.</span></p>
 							<div class="parents-chart">
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+		</div> <!-- end page body -->
 
 		</div> <!-- end main container -->
 	</body>
