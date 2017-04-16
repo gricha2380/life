@@ -7,22 +7,30 @@ $(document).ready(function() {
 		event.preventDefault();
 
 		//$(".main-input").removeClass("waiting");
+		$(".error").hide();
 		yearBorn = $(".what-year").val();
-		age = currentYear - yearBorn;
-		remainder = avgLife - age;
-		ageMonth = age*12;
-		ageWeek = age*52;
-		ageDay = age*365;
+		if (yearBorn < 1950 || yearBorn > 2017) {
+			$(".error").show();
+			$(".error").html('<p class="text-center">Please enter a valid year.</p>');
+		}
+		else {
+			console.log("hello");
+			age = currentYear - yearBorn;
+			remainder = avgLife - age;
+			ageMonth = age*12;
+			ageWeek = age*52;
+			ageDay = age*365;
 
-		//console.log("Born in "+yearBorn,"You are "+age);
-		$(".page-body").fadeIn('slow'); //make this fade in
+			//console.log("Born in "+yearBorn,"You are "+age);
+			$(".page-body").fadeIn('slow'); //make this fade in
 
-		//life chart loop
-		lifeYears();
-		christmas();
-		elections();
-		books();
-		parents();
+			//life chart loop
+			lifeYears();
+			christmas();
+			elections();
+			books();
+			parents();
+		}
 
 	});
 
@@ -131,7 +139,7 @@ $(document).ready(function() {
 			electionsChartRemainder += '<div class="unit square gray elections"></div>';
 		}
 		$(".elections-chart").append(electionsChartRemainder);
-		$(".elections-left").html((avgLife-age)/4 + " Elections left");
+		$(".elections-left").html(Math.floor((avgLife-age)/4) + " Elections left");
 	}
 
 	function books(){
@@ -161,7 +169,11 @@ $(document).ready(function() {
 			parentsChartRemainder += '<div class="unit square gray parents micro"></div>';
 		}
 		$(".parents-chart").append(parentsChartRemainder);
-		$(".parents-left").html((avgLife-(age+25))*2 + " remaining trips to visit your parents before they die.");
+		if ((avgLife-(age+25))*2<0) {
+			$(".parents-left").html("0 remaining trips to your parents<br>Your parents have already passed the average American lifespan and are presumed dead.");
+		} else {
+			$(".parents-left").html((avgLife-(age+25))*2 + " trips to see your parents");
+		}
 	}
 
 

@@ -85,3 +85,6 @@ a[data-toggle="collapse"] {
 .panel-body p {
 	color: #607d8b;
 }
+.error {
+	display: none;
+}
