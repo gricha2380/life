@@ -94,3 +94,6 @@ footer p{
 	display: none;
     padding-bottom: 30px;
 }
+.research a {
+    font-size: .8em;
+}
