@@ -9,7 +9,7 @@ $(document).ready(function() {
 		//$(".main-input").removeClass("waiting");
 		$(".error").hide();
 		yearBorn = $(".what-year").val();
-		if (yearBorn < 1950 || yearBorn > 2017) {
+		if (yearBorn < 1933 || yearBorn > 2017) {
 			$(".error").show();
 			$(".error").html('<p class="text-center">Please enter a valid year.</p>');
 		}
@@ -175,6 +175,4 @@ $(document).ready(function() {
 			$(".parents-left").html((avgLife-(age+25))*2 + " trips to see your parents");
 		}
 	}
-
-
 });
