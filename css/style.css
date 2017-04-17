@@ -112,3 +112,8 @@ footer p{
 .research a {
     font-size: .8em;
 }
+
+#year-born .input-group {
+	display: inline-table;
+    vertical-align: middle;
+}
