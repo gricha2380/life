@@ -129,13 +129,16 @@ $(document).ready(function() {
 
 	function elections(){
 		var electionsChartContent = '';
-		for (var x=0;x<(avgLife-age)/4;x++) {
+		var count =0;
+		for (var x=0;x<((age)/4);x++) {
 			electionsChartContent += '<div class="unit square elections"></div>'
+			count++;
 		}
 		$(".elections-chart").html(electionsChartContent);
+		console.log(count+" elections");
 
 		var electionsChartRemainder = '';
-		for (var x=0;x<(avgLife-age)/4;x++) {
+		for (var x=0;x<((avgLife-age)/4);x++) {
 			electionsChartRemainder += '<div class="unit square gray elections"></div>';
 		}
 		$(".elections-chart").append(electionsChartRemainder);
@@ -144,7 +147,7 @@ $(document).ready(function() {
 
 	function books(){
 		var booksChartContent = '';
-		for (var x=0;x<(avgLife-age)*4;x++) {
+		for (var x=0;x<(age)*4;x++) {
 			booksChartContent += '<div class="unit square books small"></div>'
 		}
 		$(".books-chart").html(booksChartContent);
